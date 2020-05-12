@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-br">
+	<HEAD>
+		<meta charset=utf-8>
+		<title> ProFasipe - Tabulação de Dados do Estagio  </title>
+		
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+		<link rel="stylesheet" type="text/css" href="css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		
+		
+		<!--<link rel="stylesheet" type="text/css" href="Style.css">-->
+		<script type="text/javascript" src="js/codigo.js"></script>
+		<script type="text/javascript" src="codigo.js"></script>
+		
+	</HEAD>
+	<BODY onload="criarAbrirBanco()">
+		<div class="row " >
+						
+						<button class="waves-effect waves-light btn" onclick="mostrar()"> 
+							<i class="material-icons ">all_out</i>
+							 
+						</button>	
+						
+						<button class="waves-effect waves-light btn" onclick="esconder()"> 
+							<i class="material-icons ">code</i>
+							 
+						</button>	
+										
+						
+		
+			<div class="col s12 boxformulario" id="esconde">
+				<h5 class="center-align" > Cadastro de Alunos </h5>
+				<div class="row" >
+				
+					<div id="listaTurmas"   name="listaTurmas"> </div>
+				
+					<div class="input-field col s1">
+						<i class="material-icons prefix">format_list_numbered</i>
+						<input disabled type="text" id="idAluno" placeholder="">	
+						<label for="idAluno"> N Aluno </label>
+					</div>
+					
+					<div class="input-field col s3 ">
+						<i class="material-icons prefix ">face</i>
+						<input data-length="50" class="uppercase" type="text" id="ALUNO" placeholder="Insira o Nome do Aluno">	
+						<label for="Aluno"> Aluno </label>
+					</div>
+					
+					
+					<div class="input-field col s3">
+						<i class="material-icons prefix">local_hospital</i>
+						<input data-length="50" class="uppercase" type="text" id="CNS" placeholder="Insira o CNS">	
+						<label for="CNS"> CNS </label>
+					</div>
+					
+					
+					
+					<div class="input-field col s1">
+					<select id="SEXO" name="SEXO">
+						<option value="MASCULINO">MASCULINO</option>
+						<option value="FEMININO">FEMININO</option>
+						
+					</select>
+						<label>Sexo</label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">data_usage</i>
+						<input data-length="50" class="uppercase" type="text" id="IDADE" placeholder="Insira a idade">	
+						<label for="Idade"> Idade </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">face</i>
+						<input data-length="50" class="uppercase" type="date" id="DataNascimento" placeholder="Insira a Data de Nascimento">	
+						<label for="DataNascimento"> DataNascimento </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">place</i>
+						<input data-length="50" class="uppercase" type="text" id="Endereco" placeholder="Insira o Endereco">	
+						<label for="Endereco"> Endereco </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">phone</i>
+						<input data-length="50" class="uppercase" type="text" id="Telefone" placeholder="Insira o Telefone">	
+						<label for="Telefone"> Telefone </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<select id="Educacao" name="Educacao">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Ed. em Saúde</label>
+					</div>
+					
+					<div class="input-field col s2">
+						<select id="Evidenciacao" name="Evidenciacao">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Ev. de Placa</label>
+					</div>
+					
+					
+					<div class="input-field col s2">
+						<select id="CP" name="CP">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Controle de Placa</label>
+					</div>
+					
+					
+					
+					 <div class="input-field col s2">
+						<select id="ATF" name="ATF">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Ap. Topica de Fluor</label>
+					</div>
+					
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="CPO" placeholder="Insira o CPO">	
+						<label for="CPO"> CPO </label>
+					</div>
+					
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="ART0" placeholder="Insira o ART">	
+						<label for="ART0"> ART </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="CEO" placeholder="Insira o CEO">	
+						<label for="CEO"> CEO </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="ART1" placeholder="Insira o ART">	
+						<label for="ART1"> ART </label>
+					</div>
+					
+					<div class="input-field col s2">
+						<select id="RISCO" name="RISCO">
+						<option value="BAIXO">BAIXO</option>
+						<option value="MEDIO">MEDIO</option>
+						<option value="ALTO">ALTO</option>
+						</select>
+						<label>Risco</label>
+					</div>
+					
+										
+					
+					<div class="input-field col s2">
+						<select id="Selante" name="Selante">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Selante</label>
+					</div>
+					
+					
+					
+					<div class="input-field col s2">
+						<select id="Encaminhado" name="Encaminhado">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Enc. Fasipe</label>
+					</div>
+					
+					<div class="input-field col s2">
+						<select id="Autorizado" name="Autorizado">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Autorizado</label>
+					</div>
+					
+					<div class="input-field col s2">
+						<select id="Colaborativo" name="Colaborativo">
+						<option value="SIM">SIM</option>
+						<option value="NAO">NAO</option>
+						</select>
+						<label>Colaborativo</label>
+					</div>
+					
+					
+					
+					
+					
+					<div class="input-field col s2">
+						<i class="material-icons prefix">question_answer</i>
+						<input data-length="50" class="uppercase" type="text" id="Observacao" placeholder="Insira a Observacao">	
+						<label for="Observacao"> Observacao </label>
+					</div>
+			
+				
+				</div>
+				<br>
+				
+				<div class="row ">
+					<div class="col s2">
+					</div >
+					
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="novoAluno()"> 
+							<i class="material-icons ">note_add</i>
+						</button>
+					</div>
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="atualizaAluno()"> 
+							<i class="material-icons ">create</i>
+							 
+						</button>
+					</div>
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="excluiAluno()"> 
+							<i class="material-icons ">delete</i>
+							 
+						</button>
+						
+						
+						
+						
+					</div>
+				</div>
+							
+			</div>
+			
+			
+			<div class="col s12 boxformulario ">
+				<div class="col s12 ">
+					<h5 class="center-align"> Lista de Alunos </h5>
+					
+					<div class="input-field col s3">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="ESCOLA" placeholder="Insira a Escola">	
+						<label for="ESCOLA"> Escola </label>
+					</div>
+					
+					<div class="input-field col s3">
+						<i class="material-icons prefix">label</i>
+						<input data-length="50" class="uppercase" type="text" id="Turma" placeholder="Insira a Turma">	
+						<label for="Turma"> Turma </label>
+					</div>
+					
+					
+					<div id="listaAlunos"> 	 </div>
+				</div>
+			</div>
+			
+			<div class="col s12 boxformulario ">
+				<div class="col s12 ">
+					<h5 class="center-align"> Totais </h5>
+					<b><div id="listaTotaisAlunos"> 	 </div>
+					<div id="listaTotaisMeninos"> 	 </div>
+					<div id="listaTotaisMeninas"> 	 </div>
+					<div id="listaTotalED"> 	 </div>
+					
+					<div id="listaTotalCP"> 	 </div>
+					<div id="listaTotalATF"> 	 </div>
+					<div id="listaTotalCPO"> 	 </div>
+					<div id="listaTotalART0"> 	 </div>
+					<div id="listaTotalCEO"> 	 </div>
+					<div id="listaTotalART1"> 	 </div>
+				</div>
+			</div>
+			
+			
+		     
+		
+		</div >
+		
+		
+		
+	<!-- deixa isso queto -->
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/materialize.js"></script>
+	</BODY>
+</HTML>
+

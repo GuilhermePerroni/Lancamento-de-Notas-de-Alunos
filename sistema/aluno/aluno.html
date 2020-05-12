@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-br">
+	<HEAD>
+		<meta charset=utf-8>
+		<title> ProClin Prótese Dentária </title>
+		
+		
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!---->
+		<link rel="stylesheet" type="text/css" href="../../css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="Style.css">-->
+		<script type="text/javascript" src="../../js/codigo.js"></script>
+		<script type="text/javascript" src="codigo.js"></script>
+		
+	</HEAD>
+	<BODY onload="criarAbrirBanco()">
+		<div class="row">
+		
+		
+			
+			
+			<div class="col s3 boxformulario">
+				<h5 class="center-align" > Cadastro de Alunos </h5>
+		
+				<row>
+				
+					<div class="input-field col s12">
+						<i class="material-icons prefix">format_list_numbered</i>
+						<input disabled type="text" id="idAluno" placeholder="">	
+						<label for="idAluno"> Aluno </label>
+					</div>
+					
+					<div class="input-field col s12">
+						<i class="material-icons prefix">location_city</i>
+						<input class="uppercase" type="text" id="descricaoAluno" placeholder="">	
+						<label for="descricaoAluno"> Descrição </label>
+					</div>
+				
+					<div class="input-field col s12">
+						<i class="material-icons prefix">location_city</i>
+						<input type="text" id="box" placeholder="">	
+						<label for="box"> Box </label>
+						
+					</div>
+					
+					<div id="listaTurmas"   name="listaTurmas"> </div>
+				
+				</row>
+				
+				<br>
+				
+				<div class="row ">
+					<div class="col s2">
+					</div >
+					
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="inserirAluno()"> 
+							<i class="material-icons ">note_add</i>
+						</button>
+					</div>
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="atualizarAluno()"> 
+							<i class="material-icons ">create</i>
+							 
+						</button>
+					</div>
+					<div class="col s3">
+						<button class="waves-effect waves-light btn" onclick="excluirAluno()"> 
+							<i class="material-icons ">delete</i>
+							 
+						</button>
+					</div>
+				</div>
+					
+
+
+						
+			
+			</div>
+			
+			
+			<div class="col s9 boxformulario ">
+				<h5 class="center-align"> Lista de Alunos </h5>
+				<div class="col s12 ">
+					
+					<div id="listaAluno"> </div>
+				</div>
+			</div>
+			
+			<div id="modalAluno"> </div>
+			
+			
+		</div>
+		
+		
+		
+
+	<!-- deixa isso queto -->
+	<script src="../../js/jquery-3.2.1.js"></script>
+	<script src="../../js/materialize.js"></script>
+
+
+	</BODY>
+</HTML>
+
